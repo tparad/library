@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    align-items: center;
+    background-color: rgb(238,238,238);
+}
+
+header {
+    margin: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#open-popup {
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1.25rem;
+    padding: 15px 20px;
+    background-color: rgb(106,191,195);
+    color: white;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+#form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: solid 2px black;
+    width:50%;
+    max-width: 400px;
+    z-index:20;
+    background-color: white;
+}
+
+#form-popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.close-button {
+    border: none;
+    outline:none;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#popup-overlay {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+    opacity:0;
+}
+
+#popup-overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+#book-form {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    min-width:min-content;
+    margin:auto;
+    padding: 10px;
+}
+
+#library-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 75%;
+    min-width: 500px;
+    margin: auto;
+}
+
+.library-book {
+    display: block;
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 50px;
+    font-size: 1.2rem;
+    color:white;
+    background-color: rgb(204,149,67)
+}
+
+.book-title, .book-author, .book-pages{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.delete-button {
+    outline:none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(106,191,195);
+    color: white;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 10px 5px;
+}
+
+.read-button {
+    outline:none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgba(0, 128, 0, 0.35);
+    color: white;
+    border: solid 1px black;
+    border-radius: 3px;
+    margin-bottom: 60px;
+    height: 30px;
+    width: 100px;
+}
+
+.status-read {
+    background-color: rgba(0, 128, 0, 0.35);
+}
+
+.status-not-read {
+    background-color: rgba(255, 0, 0, 0.35);
+]

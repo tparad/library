@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <div>
+            <button id="open-popup">Add New Book</button>
+        </div>
+    </header>
+    <div id="library-container"></div>
+    <div id="popup-overlay"></div>
+    <div id="form-popup">
+        <div class="popup-header">
+            <div class="popup-title">Add Book to Library</div>
+            <button class="close-button">&times;</button>
+        </div>
+        <form id="book-form">
+            <div class="form-element">
+                <label>Title:</label><br>
+                <input type="text" id="title">
+            </div>
+            <div class="form-element">
+                <label>Author:</label><br>
+                <input type="text" id="author">
+            </div>
+            <div class="form-element">
+                <label>Pages:</label><br>
+                <input type="number" id="pages">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="read">
+                <label>Read</label>
+            </div>
+            <div class="form-element">
+                <input type="submit" id="add-book" value="Add Book">
+            </div> 
+        </form>
+    </div>
+
+
+    <template id="book-template">
+        <div data-id="" class="library-book">
+            <div class="book-title"></div>
+            <div class="book-author"></div>
+            <div class="book-pages"></div>
+            <div class="button-container">
+                <div>
+                    <button class="read-button"></button>
+                </div>
+                <div>
+                    <button class="delete-button">Delete Book</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
